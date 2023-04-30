@@ -1,0 +1,31 @@
+{
+  "title": "Linked Icon Text Grid",
+  "description": "Grid of icon and text squares that are linked to other pages or posts.",
+  "name": "sffullportfolio/linkedicontextgrid",
+  "script": "",
+  "style": "style-index",
+  "editorScript": "",
+  "editorStyle": "file:../../../build/index.css",
+  "textdomain": "sffullportfolio",
+  "category": "CATEGORY",
+  "icon": "admin-comments",
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "keywords": ["keyword", "keyword"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "./index.php"
+  },
+  "supports": {
+    "html": true,
+    "anchor": true,
+    "jsx": true,
+    "align": true
+  },
+  "attributes": {
+    "className": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

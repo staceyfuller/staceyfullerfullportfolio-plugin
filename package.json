@@ -1,0 +1,35 @@
+{
+  "name": "sffullportfolio-plugin",
+  "version": "0.1.0",
+  "description": "Plugin to house functionality for sf fuller portfolio.",
+  "author": "Stacey Fuller",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/staceyfuller/staceyfullerfullportfolio-plugin.git"
+  },
+  "homepage": "https://github.com/staceyfuller/staceyfullerfullportfolio-plugin.git#readme",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "start": "wp-scripts start",
+    "packages-update": "wp-scripts packages-update"
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "^7.0.1",
+    "@wordpress/blocks": "^11.0.1",
+    "@wordpress/i18n": "^4.2.1"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^18.0.0",
+    "copy-webpack-plugin": "^9.0.1"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie > 0",
+    "not ie_mob > 0",
+    "edge > 15"
+  ]
+}

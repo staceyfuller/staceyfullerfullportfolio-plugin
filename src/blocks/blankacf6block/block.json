@@ -1,0 +1,31 @@
+{
+  "title": "BLOCK_TITLE",
+  "description": "BLOCK_DESCRIPTION",
+  "name": "sffullportfolio/BLOCKNAME",
+  "script": "",
+  "style": "style-index",
+  "editorScript": "",
+  "editorStyle": "file:../../../build/index.css",
+  "textdomain": "sffullportfolio",
+  "category": "CATEGORY",
+  "icon": "admin-comments",
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "keywords": ["keyword", "keyword"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "./index.php"
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "jsx": true,
+    "align": true
+  },
+  "attributes": {
+    "className": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}
