@@ -18,7 +18,32 @@ if (!empty($block['align'])) {
 
 
 ?>
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
+  <?php
+  // Check rows existexists.
+  if (have_rows('icon_text_grid_items')) :
 
+    // Loop through rows.
+    while (have_rows('icon_text_grid_items')) : the_row();
 
-</section>
+      // Load sub field value.
+      $icon = get_sub_field('icon');
+      $text = get_sub_field('text');
+      $link = get_sub_field('link');
+
+  ?>
+      <a href="<?php echo esc_url($link['url']); ?>" target="_blank" class="linkedicontextgrid-item" title="<?php esc_html($link['title']); ?>">
+        <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_url($icon['alt']); ?>" />
+        <h4><?php echo $text; ?></h4>
+      </a>
+  <?php
+    // End loop.
+    endwhile;
+
+  // No value.
+  else :
+  // Do something...
+  endif;
+  ?>
+
+</div>

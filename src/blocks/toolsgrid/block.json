@@ -1,7 +1,7 @@
 {
-  "title": "Linked Icon Text Grid",
-  "description": "Grid of icon and text squares that are linked to other pages or posts.",
-  "name": "sffullportfolio/linkedicontextgrid",
+  "title": "Tool and Tech Grid",
+  "description": "Grid of tools and tech plus a heading.",
+  "name": "sffullportfolio/toolsgrid",
   "script": "",
   "style": "style-index",
   "editorScript": "",
@@ -11,13 +11,13 @@
   "icon": "admin-comments",
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "keywords": ["icons", "grid", "icon text grid", "text"],
+  "keywords": ["grid"],
   "acf": {
     "mode": "preview",
     "renderTemplate": "./index.php"
   },
   "supports": {
-    "html": true,
+    "html": false,
     "anchor": true,
     "jsx": true,
     "align": true

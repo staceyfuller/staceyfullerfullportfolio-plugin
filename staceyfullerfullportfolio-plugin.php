@@ -25,6 +25,20 @@
 // define('SFFULLPORTFOLIO_PLUGIN_URL', plugin_dir_url(__FILE__));
 // define('PLUGIN_FOLDER_NAME', basename(SFFULLPORTFOLIO_PLUGIN_DIR));
 
+/**
+ * Custom Block Categories
+ */
+add_filter('block_categories_all', function ($categories) {
+
+	// Adding a new category.
+	$categories[] = array(
+		'slug'  => 'custom-blocks',
+		'title' => 'Custom Blocks'
+	);
+
+	return $categories;
+});
+
 /** *
  * Load Custom Blocks
  * Registers block types including their render callback function
@@ -34,9 +48,8 @@ function create_block_sffullportfolio_blocks_plugin_block_init()
 
 
 	# Register ACF6 Blocks
-	register_block_type(__DIR__ . '/src/blocks/wrapper');
-	// register_block_type(__DIR__ . '/src/blocks/iconverticalstackrow', array('icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{stroke-width:.8px;}.cls-1,.cls-2{fill:none;stroke:#000;stroke-miterlimit:10;}.cls-2{stroke-width:.48px;}</style></defs><line class="cls-1" x1="12.74" y1="12.48" x2="23.13" y2="12.48"/><rect x="15.3" y="4.96" width="5.28" height="5.28"/><line class="cls-2" x1="12.74" y1="14.98" x2="23.13" y2="14.98"/><line class="cls-2" x1="12.74" y1="18.98" x2="23.13" y2="18.98"/><line class="cls-2" x1="12.74" y1="17.11" x2="23.13" y2="17.11"/><line class="cls-1" x1=".87" y1="12.54" x2="11.26" y2="12.54"/><rect x="3.43" y="5.02" width="5.28" height="5.28"/><line class="cls-2" x1=".87" y1="15.04" x2="11.26" y2="15.04"/><line class="cls-2" x1=".87" y1="19.04" x2="11.26" y2="19.04"/><line class="cls-2" x1=".87" y1="17.16" x2="11.26" y2="17.16"/></svg>'));
-
+	register_block_type(__DIR__ . '/src/blocks/linkedicontextgrid');
+	register_block_type(__DIR__ . '/src/blocks/toolsgrid');
 }
 add_action('init', 'create_block_sffullportfolio_blocks_plugin_block_init');
 
