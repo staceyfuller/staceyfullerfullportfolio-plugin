@@ -50,6 +50,11 @@ function create_block_sffullportfolio_blocks_plugin_block_init()
 	# Register ACF6 Blocks
 	register_block_type(__DIR__ . '/src/blocks/linkedicontextgrid');
 	register_block_type(__DIR__ . '/src/blocks/toolsgrid');
+	register_block_type(__DIR__ . '/src/blocks/formandtext');
+	register_block_type(__DIR__ . '/src/blocks/portfoliolist');
+	register_block_type(__DIR__ . '/src/blocks/portfolioitemdetails');
+	register_block_type(__DIR__ . '/src/blocks/twotextcolumns3070');
+	register_block_type(__DIR__ . '/src/blocks/showreelslist');
 }
 add_action('init', 'create_block_sffullportfolio_blocks_plugin_block_init');
 

@@ -1,0 +1,31 @@
+{
+  "title": "Form and Text",
+  "description": "Form and text block.",
+  "name": "sffullportfolio/formandtext",
+  "script": "",
+  "style": "style-index",
+  "editorScript": "",
+  "editorStyle": "file:../../../build/index.css",
+  "textdomain": "sffullportfolio",
+  "category": "custom-blocks",
+  "icon": "admin-comments",
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "keywords": ["form", "text", "contact"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "./index.php"
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "jsx": true,
+    "align": true
+  },
+  "attributes": {
+    "className": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}
