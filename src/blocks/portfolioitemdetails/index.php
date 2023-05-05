@@ -16,11 +16,19 @@ if (!empty($block['align'])) {
   $classes .= ' align' . $block['align'];
 }
 
+$work_type = get_field('work_type');
+
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
-  <div class="portfolioitemdetails__client">
-    <h3 class="pi-detail-heading"><?php _e('Client', 'sffullportfolio'); ?></h3>
-    <p class="pi-detail-content"><?php echo esc_attr(get_field('client')); ?></p>
+  <div class="portfolioitemdetails__worksource">
+    <?php if ($work_type == "client") : ?>
+      <h3 class="pi-detail-heading"><?php _e('Client', 'sffullportfolio'); ?></h3>
+      <p class="pi-detail-content"><?php echo esc_attr(get_field('client')); ?></p>
+    <?php endif; ?>
+    <?php if ($work_type == "employer") : ?>
+      <h3 class="pi-detail-heading"><?php _e('Employer', 'sffullportfolio'); ?></h3>
+      <p class="pi-detail-content"><?php echo esc_attr(get_field('employer')); ?></p>
+    <?php endif; ?>
   </div>
   <div class="portfolioitemdetails__skills">
     <h3 class="pi-detail-heading"><?php _e('Skills', 'sffullportfolio'); ?></h3>
