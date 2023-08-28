@@ -19,10 +19,10 @@ if (!empty($block['align'])) {
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
   <div class="formandtext__content">
-    <h2><?php echo get_field('heading'); ?></h2>
-    <?php echo get_field('text'); ?>
+    <h2><?php echo esc_html(get_field('heading')); ?></h2>
+    <?php echo wp_kses_post(get_field('text')); ?>
   </div>
   <div class="formandtext__form">
-    <?php echo get_field('form_shortcode'); ?>
+    <?php echo wp_kses_post(get_field('form_shortcode')); ?>
   </div>
 </div>

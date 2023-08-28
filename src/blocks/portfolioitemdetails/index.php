@@ -23,19 +23,19 @@ $work_type = get_field('work_type');
   <div class="portfolioitemdetails__worksource">
     <?php if ($work_type == "client") : ?>
       <h3 class="pi-detail-heading"><?php _e('Client', 'sffullportfolio'); ?></h3>
-      <p class="pi-detail-content"><?php echo esc_attr(get_field('client')); ?></p>
+      <p class="pi-detail-content"><?php echo esc_html(get_field('client')); ?></p>
     <?php endif; ?>
     <?php if ($work_type == "employer") : ?>
       <h3 class="pi-detail-heading"><?php _e('Employer', 'sffullportfolio'); ?></h3>
-      <p class="pi-detail-content"><?php echo esc_attr(get_field('employer')); ?></p>
+      <p class="pi-detail-content"><?php echo esc_html(get_field('employer')); ?></p>
     <?php endif; ?>
   </div>
   <div class="portfolioitemdetails__skills">
     <h3 class="pi-detail-heading"><?php _e('Skills', 'sffullportfolio'); ?></h3>
-    <p class="pi-detail-content"><?php echo get_field('skills_list'); ?></p>
+    <p class="pi-detail-content"><?php echo wp_kses_post(get_field('skills_list')); ?></p>
   </div>
   <div class="portfolioitemdetails__project-description">
-    <h1><?php echo esc_attr(get_field('project_title')); ?></h1>
-    <?php echo get_field('project_description'); ?>
+    <h1><?php echo esc_html(get_field('project_title')); ?></h1>
+    <?php echo wp_kses_post(get_field('project_description')); ?>
   </div>
 </div>

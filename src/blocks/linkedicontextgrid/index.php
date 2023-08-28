@@ -32,9 +32,9 @@ if (!empty($block['align'])) {
       $link = get_sub_field('link');
 
   ?>
-      <a href="<?php echo esc_url($link['url']); ?>" target="_self" class="linkedicontextgrid-item" title="<?php esc_html($link['title']); ?>">
-        <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_url($icon['alt']); ?>" />
-        <h4><?php echo $text; ?></h4>
+      <a href="<?php echo esc_url($link['url']); ?>" target="_self" class="linkedicontextgrid-item" title="<?php esc_attr($link['title']); ?>">
+        <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />
+        <h4><?php echo esc_html($text); ?></h4>
       </a>
   <?php
     // End loop.

@@ -18,7 +18,7 @@ if (!empty($block['align'])) {
 
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
-  <h1><?php echo get_field('showreels_title'); ?></h1>
+  <h1><?php echo esc_html(get_field('showreels_title')); ?></h1>
   <?php
 
   // Check rows existexists.
@@ -34,11 +34,12 @@ if (!empty($block['align'])) {
   ?>
       <div class="showreel-list-item">
         <div class="video">
-          <?php echo $showreel_video_code; ?>
+          <?php
+          echo wp_kses_post($showreel_video_code); ?>
         </div>
         <div class="details">
-          <h3><?php echo esc_attr($showreel_title); ?></h3>
-          <p><?php echo $showreel_desc; ?></p>
+          <h3><?php echo esc_html($showreel_title); ?></h3>
+          <p><?php echo wp_kses_post($showreel_desc); ?></p>
         </div>
       </div>
   <?php

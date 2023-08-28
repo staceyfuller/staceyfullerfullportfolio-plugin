@@ -19,9 +19,9 @@ if (!empty($block['align'])) {
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
   <div class="small-column-text">
-    <?php echo esc_attr(get_field('small_column_text')); ?>
+    <?php echo esc_html(get_field('small_column_text')); ?>
   </div>
   <div class="large-column-text">
-    <?php echo get_field('large_column_text'); ?>
+    <?php echo wp_kses_post(get_field('large_column_text')); ?>
   </div>
 </div>

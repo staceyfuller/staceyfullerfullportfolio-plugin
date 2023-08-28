@@ -27,20 +27,20 @@ if (!empty($block['align'])) {
   <h2><?php echo $heading; ?></h2>
   <?php if ($tools) : ?>
     <div class="toolsgrid__list-item">
-      <h3><?php echo $tools['tools_heading']; ?></h3>
-      <p><?php echo $tools['tools_list']; ?></p>
+      <h3><?php echo esc_html($tools['tools_heading']); ?></h3>
+      <p><?php echo wp_kses_post($tools['tools_list']); ?></p>
     </div>
   <?php endif; ?>
   <?php if ($tech) : ?>
     <div class="toolsgrid__list-item">
-      <h3><?php echo $tech['tech_heading']; ?></h3>
-      <p><?php echo $tech['tech_list']; ?></p>
+      <h3><?php echo esc_html($tech['tech_heading']); ?></h3>
+      <p><?php echo wp_kses_post($tech['tech_list']); ?></p>
     </div>
   <?php endif; ?>
   <?php if ($cms) : ?>
     <div class="toolsgrid__list-item">
-      <h3><?php echo $cms['cms_heading']; ?></h3>
-      <p><?php echo $cms['cms_list']; ?></p>
+      <h3><?php echo esc_html($cms['cms_heading']); ?></h3>
+      <p><?php echo wp_kses_post($cms['cms_list']); ?></p>
     </div>
   <?php endif; ?>
 </div>

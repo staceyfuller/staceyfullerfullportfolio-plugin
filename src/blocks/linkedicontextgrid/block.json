@@ -10,7 +10,7 @@
   "category": "custom-blocks",
   "icon": "admin-comments",
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "keywords": ["icons", "grid", "icon text grid", "text"],
   "acf": {
     "mode": "preview",

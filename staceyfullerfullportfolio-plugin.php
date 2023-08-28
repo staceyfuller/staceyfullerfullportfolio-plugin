@@ -62,21 +62,12 @@ add_filter('should_load_separate_core_block_assets', '__return_true');
 
 
 // enqueue the index.js in editor only to stop getting the "block is already registered" message in console.
+//Register/load styles front and back end
 function sffullportfolio_enqueue_blocks_scripts()
 {
 	$asset_file = require plugin_dir_path(__FILE__) . 'build/index.asset.php';
 	wp_enqueue_script('sffullportfolio-blocks-js', plugins_url('/build/index.js', __FILE__), $asset_file['dependencies'], 1.0, false);
-}
-add_action('enqueue_block_editor_assets', 'sffullportfolio_enqueue_blocks_scripts');
 
-
-
-/*
-STYLES
-*/
-// Register/load styles front and back end
-function sffullportfolio_register_and_enqueue_block_styles()
-{
 
 	// styles
 	$styleIndexPath = '/build/style-index.css';
@@ -87,6 +78,22 @@ function sffullportfolio_register_and_enqueue_block_styles()
 		filemtime(plugin_dir_path(__FILE__) . $styleIndexPath),
 		'all'
 	); // filetime used for cache busting
-
 }
-add_action('enqueue_block_assets', 'sffullportfolio_register_and_enqueue_block_styles');
+add_action('enqueue_block_assets', 'sffullportfolio_enqueue_blocks_scripts');
+
+
+// add iframe to wp_kses_post
+function sffullportfolio_add_iframe_to_kses_post($allowedposttags)
+{
+	$allowedposttags['iframe'] = array(
+		'src'             => true,
+		'height'          => true,
+		'width'           => true,
+		'frameborder'     => true,
+		'allowfullscreen' => true,
+		"allow"			  => true,
+		"style"		  	  => true
+	);
+	return $allowedposttags;
+}
+add_filter('wp_kses_allowed_html', 'sffullportfolio_add_iframe_to_kses_post', 10, 2);

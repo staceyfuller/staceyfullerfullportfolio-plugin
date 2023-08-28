@@ -18,7 +18,7 @@ if (!empty($block['align'])) {
 
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
-  <h1><?php echo get_field('portfolio_list_title'); ?></h1>
+  <h1><?php echo esc_html(get_field('portfolio_list_title')); ?></h1>
 
 
   <?php
@@ -37,10 +37,10 @@ if (!empty($block['align'])) {
       <div class="portfolio-list-item">
         <span class="details">
           <a href="<?php echo esc_url($project_link); ?>" title="<?php _e('View Project', 'sffullportfolio'); ?>">
-            <h3><?php echo esc_attr($title); ?></h3>
+            <h3><?php echo esc_html($title); ?></h3>
           </a>
           <a href="<?php echo esc_url($project_link); ?>" title="<?php _e('View Project', 'sffullportfolio'); ?>">
-            <p><?php echo esc_attr($work_type); ?></p>
+            <p><?php echo esc_html($work_type); ?></p>
           </a>
         </span>
         <a href="<?php echo esc_url($project_link); ?>" title="<?php _e('View Project', 'sffullportfolio'); ?>">

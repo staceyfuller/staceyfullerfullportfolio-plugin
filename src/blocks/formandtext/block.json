@@ -10,7 +10,7 @@
   "category": "custom-blocks",
   "icon": "admin-comments",
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "keywords": ["form", "text", "contact"],
   "acf": {
     "mode": "preview",
